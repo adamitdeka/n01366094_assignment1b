@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Bus incident report</title>
+</head>
+<body>
+    <h1>Bus Incident Report Form</h1>
+    <form method="get" action="http://sandbox.bittsdevelopment.com/humber/httpdebug/acceptdata.php">
+        <h2>This is documenting an:</h2>
+        <div>
+            <input type="checkbox" id="injuryCheck" name="injuryCheck" value="injuryCheck">
+            <label for="injuryCheck">Injury</label>
+        </div>
+        <div>
+            <input type="checkbox" id="firstAidCheck" name="firstAidCheck" value="firstAidCheck">
+            <label for="firstAidCheck">First Aid</label>
+        </div>
+        <div>
+            <input type="checkbox" id="observationCheck" name="observationCheck" value="observationCheck">
+            <label for="observation">Observation</label>
+        </div>
+        <fieldset>
+            <legend>Reporter's Information</legend>
+            <div>
+                <label for="reporterFName">Firstname:</label>
+                <input type="text" id="reporterFName" name="reporterFName">
+            </div>
+            <div>
+                <label for="reporterLName">Lastname:</label>
+                <input type="text" id="reporterLName" name="reporterLName">
+            </div>
+            <div>
+                <label for="reporterAge">Age</label>
+                <input type="text" id="reporterAge" name="reporterAge">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tour Information</legend>
+            <div>
+                <label for="tourOrigin">Origin: </label>
+                <input type="text" id="tourOrigin" name="tourOrigin">
+            </div>
+            <div>
+                <label for="tourDestination">Destination: </label>
+                <input type="text" id="tourDestination" name="tourDestination">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Injured Passenger Details</legend>
+            <div>
+                <label for="passengerTotal">Total number of passengers</label>
+                <input type="text" id="passengerTotal" name="passengerTotal">
+            </div>
+            <div>
+                <label for="injuredPassengerNumber">Total number of injured passenger:</label>
+                <input type="text" id="injuredPassengerNumber" name="injuredPassengerNumber">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Vehicle Information</legend>
+            <div>
+                <label for="driverFName">Driver first name:</label>
+                <input type="text" id="driverFName" name="driverFName">
+            </div>
+            <div>
+                <label for="driverLName">Driver last name:</label>
+                <input type="text" id="driverLName" name="driverLName">
+            </div>
+            <div>
+                <label for="driverPhone">Driver phone number:</label>
+                <input type="tel" id="driverPhone" name="driverPhone">
+            </div>
+            <div>
+                <label for="driverAddress">Driver's address:</label>
+                <input type="text" id="driverAddress" name="driverAddress">
+            </div>
+            <div>
+                <label for="driverProvince">Province:</label>
+                <select>
+                    <option value="ab">Alberta(AB)</option>
+                    <option value="bc">British Columbia(BC)</option>
+                    <option value="mb">Manitoba(MB)</option>
+                    <option value="nb">New Brunswick(NB))</option>
+                    <option value="nl">Newfoundland and Labrador(NL)</option>
+                    <option value="nt">Northwest Territories(NT)</option>
+                    <option value="ns">Nova Scotia(NS)</option>
+                    <option value="nu">Nunavut(NU)</option>
+                    <option value="on">Ontario(ON)</option>
+                    <option value="pe">Prince Edward Island(PE)</option>
+                    <option value="qc">Quebec(QC)</option>
+                    <option value="sk">Saskatchewan(SK)</option>
+                    <option value="yt">Yukon(YT)</option>
+                </select>
+            </div>
+            <div>
+                <label for="driverLicensePlate">Vehicle license plate number:</label>
+                <input type="text" id="driverLicensePlate" name="driverLicensePlate">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Incident Details</legend>
+            <label for="incidentDate">Incident Date(yyyy/mm/dd):</label>
+            <input type="text" id=incidentDate name="incidentDate">
+            <label for="incidentTime">Incident time (hh:mm):</label>
+            <input type="text" id="incidentTime" name="incidentTime">
+            <input type="radio" id="am" value="am" name="time">
+            <label for="am">AM</label>
+            <input type="radio" id="pm" value="pm" name="time">
+            <label for="am">PM</label>
+        </fieldset>
+        <div>
+            <label for="investigationStatus">Investigation status(Only for officials):</label>
+            <select>
+                <option value="">--Select--</option>
+                <option value="statusResolved">Resolved</option>
+                <option value="statusUrgent">Requires urgent attention</option>
+                <option value="statusPending">Pending investigation</option>
+            </select>
+        </div>
+        <div><input type="submit" value="submit" /></div>
+    </form>
+</body>
+</html>
+</html>
